@@ -2,8 +2,11 @@
   <div id="app">
     <GraphAnimation />
     <Header />
-    <HeroSection />
-    <section class="services-section">
+    <section id="home">
+      <HeroSection />
+    </section>
+    
+    <section id="services" class="services-section">
       <div class="container">
         <h2>Our Services</h2>
         <div class="cards-grid">
@@ -15,8 +18,7 @@
       </div>
     </section>
     
-    <!-- New "Who We Are" Section -->
-    <section class="who-we-are">
+    <section id="who-we-are" class="who-we-are">
       <div class="container">
         <h2>Who We Are</h2>
         <div class="who-cards">
@@ -32,8 +34,7 @@
       </div>
     </section>
     
-    <!-- "Contact" Section -->
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <div class="container">
         <h2>Contact</h2>
         <div class="contact-buttons">
@@ -59,7 +60,7 @@
             LinkedIn
           </a>
           <a href="https://github.com/your-profile" target="_blank" class="contact-button">
-            <!-- GitHub Icon (updated to prevent cutting) -->
+            <!-- GitHub Icon with preserveAspectRatio to prevent cutting -->
             <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24"
               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               preserveAspectRatio="xMidYMid meet"
