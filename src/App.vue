@@ -8,7 +8,7 @@
     
     <section id="services" class="services-section">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2>{{ $t("services.title") }}</h2>
         <div class="cards-grid">
           <div class="card" v-for="(service, index) in services" :key="index">
             <h3>{{ service.title }}</h3>
@@ -20,15 +20,15 @@
     
     <section id="who-we-are" class="who-we-are">
       <div class="container">
-        <h2>Who We Are</h2>
+        <h2>{{ $t("whoWeAre.title") }}</h2>
         <div class="who-cards">
           <div class="card">
-            <h3>Founder: John Doe</h3>
-            <p>John brings a wealth of expertise in cloud infrastructure and development.</p>
+            <h3>{{ $t("whoWeAre.founder1Title") }}</h3>
+            <p>{{ $t("whoWeAre.founder1Description") }}</p>
           </div>
           <div class="card">
-            <h3>Founder: Jane Smith</h3>
-            <p>Jane leads our innovation and strategy initiatives, ensuring top-notch solutions.</p>
+            <h3>{{ $t("whoWeAre.founder2Title") }}</h3>
+            <p>{{ $t("whoWeAre.founder2Description") }}</p>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
     
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2>Contact</h2>
+        <h2>{{ $t("contact.title") }}</h2>
         <div class="contact-buttons">
           <a href="mailto:info@example.com" class="contact-button">
             <!-- Email Icon -->
@@ -46,7 +46,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            Email
+            {{ $t("contact.email") }}
           </a>
           <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-button">
             <!-- LinkedIn Icon -->
@@ -57,7 +57,7 @@
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
-            LinkedIn
+            {{ $t("contact.linkedin") }}
           </a>
           <a href="https://github.com/your-profile" target="_blank" class="contact-button">
             <!-- GitHub Icon with preserveAspectRatio to prevent cutting -->
@@ -67,7 +67,7 @@
               class="feather feather-github">
               <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 0 0 8.205 11.385c.6.11.82-.26.82-.577v-2.222c-3.338.727-4.047-1.61-4.047-1.61-.546-1.386-1.334-1.755-1.334-1.755-1.09-.746.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.81 1.304 3.495.997.107-.775.418-1.304.762-1.605-2.664-.3-5.467-1.332-5.467-5.93 0-1.31.47-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.242 2.874.12 3.176.77.84 1.232 1.912 1.912 3.222 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576A12.004 12.004 0 0 0 24 12c0-6.63-5.373-12-12-12z"></path>
             </svg>
-            GitHub
+            {{ $t("contact.github") }}
           </a>
         </div>
       </div>
