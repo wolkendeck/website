@@ -1,0 +1,20 @@
+{
+  "name": "wolkendeck-consultancy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-cli-service build",
+    "preview": "vite preview",
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^3.2.0",
+    "ant-design-vue": "next"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "@vue/cli-service": "^5.0.0"
+  }
+}
