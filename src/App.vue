@@ -32,6 +32,45 @@
       </div>
     </section>
     
+    <!-- "Contact" Section -->
+    <section class="contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-buttons">
+          <a href="mailto:info@example.com" class="contact-button">
+            <!-- Email Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-button">
+            <!-- LinkedIn Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/your-profile" target="_blank" class="contact-button">
+            <!-- GitHub Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-github">
+              <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 0 0 8.205 11.385c.6.11.82-.26.82-.577v-2.222c-3.338.727-4.047-1.61-4.047-1.61-.546-1.386-1.334-1.755-1.334-1.755-1.09-.746.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.81 1.304 3.495.997.107-.775.418-1.304.762-1.605-2.664-.3-5.467-1.332-5.467-5.93 0-1.31.47-2.382 1.235-3.222-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.242 2.874.12 3.176.77.84 1.232 1.912 1.912 3.222 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576A12.004 12.004 0 0 0 24 12c0-6.63-5.373-12-12-12z"></path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+    
     <Footer />
   </div>
 </template>
@@ -216,5 +255,51 @@ body {
   .who-cards {
     flex-direction: column;
   }
+}
+
+/* Contact Section styling */
+.contact-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
+  color: #4A90E2;
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #4A90E2;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-button:hover {
+  background: #357ABD;
+}
+
+.contact-button svg {
+  width: 24px;
+  height: 24px;
 }
 </style> 
