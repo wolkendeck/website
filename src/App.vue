@@ -5,18 +5,33 @@
     <HeroSection />
     <section class="services-section">
       <div class="container">
-         <h2>Our Services</h2>
-         <div class="cards-grid">
-           <div class="card" v-for="(service, index) in services" :key="index">
-             <h3>{{ service.title }}</h3>
-             <p>{{ service.description }}</p>
-           </div>
-         </div>
-         <RefractionButton type="primary" size="large">
-           Learn More
-         </RefractionButton>
+        <h2>Our Services</h2>
+        <div class="cards-grid">
+          <div class="card" v-for="(service, index) in services" :key="index">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
       </div>
     </section>
+    
+    <!-- New "Who We Are" Section -->
+    <section class="who-we-are">
+      <div class="container">
+        <h2>Who We Are</h2>
+        <div class="who-cards">
+          <div class="card">
+            <h3>Founder: John Doe</h3>
+            <p>John brings a wealth of expertise in cloud infrastructure and development.</p>
+          </div>
+          <div class="card">
+            <h3>Founder: Jane Smith</h3>
+            <p>Jane leads our innovation and strategy initiatives, ensuring top-notch solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <Footer />
   </div>
 </template>
@@ -25,7 +40,6 @@
 import GraphAnimation from './components/GraphAnimation.vue'
 import Header from './components/Header.vue'
 import HeroSection from './components/HeroSection.vue'
-import RefractionButton from './components/RefractionButton.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -34,7 +48,6 @@ export default {
     GraphAnimation,
     Header,
     HeroSection,
-    RefractionButton,
     Footer
   },
   data() {
@@ -154,6 +167,54 @@ body {
   }
   .card {
     width: 100%; /* on smaller screens, cards can take full width */
+  }
+}
+
+/* Who We Are Section styling */
+.who-we-are {
+  background: #f7f7f7;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.who-we-are .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.who-we-are h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3em;
+  color: #4A90E2;
+}
+
+.who-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.who-we-are .card {
+  flex: 1;
+  min-width: 250px;
+  /* Reusing card styling for consistency */
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.who-we-are .card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #4A90E2;
+}
+
+@media (max-width: 768px) {
+  .who-cards {
+    flex-direction: column;
   }
 }
 </style> 
