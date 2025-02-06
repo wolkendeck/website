@@ -5,7 +5,7 @@
     <HeroSection />
     <section class="services-section">
       <div class="container">
-         <h2>Nuestros Servicios</h2>
+         <h2>Our Services</h2>
          <div class="cards-grid">
            <div class="card" v-for="(service, index) in services" :key="index">
              <h3>{{ service.title }}</h3>
@@ -42,47 +42,47 @@ export default {
       services: [
         {
           title: 'AWS Landing Zones',
-          description: 'Implementa bases sólidas de AWS multi-cuenta para tu organización.'
+          description: 'Deploy robust multi-account AWS foundations for your organization.'
         },
         {
-          title: 'Mejoras en Procesos e Infraestructura',
-          description: 'Optimiza tus operaciones y moderniza tu infraestructura para lograr mayor eficiencia.'
+          title: 'Processes and Infrastructure Improvements',
+          description: 'Optimize operations and modernize your infrastructure for efficiency.'
         },
         {
-          title: 'Diseño y Migración de Infraestructura en la Nube',
-          description: 'Planifica, diseña y ejecuta una migración sin contratiempos hacia la nube.'
+          title: 'Cloud Infrastructure Design and Migration',
+          description: 'Plan, design, and execute a seamless migration to cloud infrastructure.'
         },
         {
-          title: 'DevOps y Automatización',
-          description: 'Optimiza tus procesos con prácticas efectivas de DevOps y automatización.'
+          title: 'DevOps and Automation',
+          description: 'Streamline your processes with automation and effective DevOps practices.'
         },
         {
-          title: 'Arquitectura de Redes y Seguridad',
-          description: 'Diseña arquitecturas de red seguras y escalables para proteger tus datos.'
+          title: 'Network Architecture and Security',
+          description: 'Design secure and scalable network architectures to protect your data.'
         },
         {
-          title: 'Recuperación ante Desastres y Continuidad del Negocio',
-          description: 'Asegura la continuidad operativa con estrategias robustas de recuperación ante desastres.'
+          title: 'Disaster Recovery and Business Continuity Planning',
+          description: 'Ensure operational continuity with robust disaster recovery strategies.'
         },
         {
-          title: 'Monitoreo y Optimización del Rendimiento',
-          description: 'Mejora el rendimiento del sistema mediante el monitoreo proactivo y ajustes especializados.'
+          title: 'Monitoring and Performance Optimization',
+          description: 'Enhance system performance with proactive monitoring and tuning.'
         },
         {
-          title: 'Cumplimiento y Gobernanza',
-          description: 'Garantiza el cumplimiento de normativas y establece marcos efectivos de gobernanza.'
+          title: 'Compliance and Governance',
+          description: 'Stay compliant with industry standards and implement effective governance.'
         },
         {
-          title: 'Optimización y Gestión de Costos',
-          description: 'Reduce costos operativos gestionando eficientemente los recursos en la nube.'
+          title: 'Cost Optimization and Management',
+          description: 'Reduce operational costs with smart resource management and optimization.'
         },
         {
-          title: 'Modernización de Sistemas Legados',
-          description: 'Actualiza sistemas obsoletos a soluciones modernas, eficientes y seguras.'
+          title: 'Legacy System Modernization',
+          description: 'Upgrade outdated systems to modern, efficient, and secure solutions.'
         },
         {
-          title: 'Contenerización y Orquestación',
-          description: 'Acelera los despliegues adoptando contenedores y herramientas de orquestación.'
+          title: 'Containerization and Orchestration',
+          description: 'Accelerate deployments using container-based architectures and orchestration tools.'
         }
       ]
     };
@@ -101,7 +101,7 @@ body {
   text-align: center;
 }
 
-/* Estilos para la sección de servicios */
+/* Services Section styling */
 .services-section {
   background: rgba(255, 255, 255, 0.9);
   padding: 40px 20px;
@@ -121,14 +121,17 @@ body {
   color: #4A90E2;
 }
 
+/* Flexbox layout for service cards */
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers items in the last row if not full */
   gap: 20px;
   margin-bottom: 20px;
 }
 
 .card {
+  width: 300px; /* approximate width so that three cards fit in a row on larger screens */
   background: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
@@ -139,7 +142,7 @@ body {
 .card h3 {
   margin: 0 0 10px;
   font-size: 1.2em;
-  color: #4A90E2; /* Color del título, igual que el botón */
+  color: #4A90E2; /* blue title matching the button */
 }
 
 @media (max-width: 768px) {
@@ -148,6 +151,9 @@ body {
   }
   .services-section h2 {
     font-size: 2em;
+  }
+  .card {
+    width: 100%; /* on smaller screens, cards can take full width */
   }
 }
 </style> 
